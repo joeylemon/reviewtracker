@@ -1,0 +1,25 @@
+name: Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        
+      - name: Start web service
+        run: python3 app.py &
+        
+      - name: Run tests
+        run: python3 -m pytest test/
