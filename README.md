@@ -1,7 +1,9 @@
 # reviewtracker
 ![Tests](https://github.com/joeylemon/reviewtracker/workflows/Tests/badge.svg)
 
-A python web service to extract review details from LendingTree. Given a URL, this service will parse the page and return a JSON representation of the reviews. For example, inputting the URL `https://www.lendingtree.com/reviews/personal/first-midwest-bank/52903183` will provide the following response:
+A python web service to extract review details from LendingTree. Given a URL, this service will parse the page and return a JSON representation of the reviews. It uses [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/#) to parse the web page and regex to extract certain details. Additionally, it uses [Flask](https://flask.palletsprojects.com/) for creating a simple web service and [pytest](https://docs.pytest.org/) to define a test suite. 
+
+For example, inputting the URL `https://www.lendingtree.com/reviews/personal/first-midwest-bank/52903183` will provide the following response:
 ```js
 [
   {
