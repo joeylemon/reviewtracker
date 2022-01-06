@@ -1,4 +1,6 @@
 # reviewtracker
+![Tests](https://github.com/joeylemon/reviewtracker/workflows/Tests/badge.svg)
+
 A python web service to extract review details from LendingTree. Given a URL, this service will parse the page and return a JSON representation of the reviews. For example, inputting the URL `https://www.lendingtree.com/reviews/personal/first-midwest-bank/52903183` will provide the following response:
 ```js
 [
