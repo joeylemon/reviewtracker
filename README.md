@@ -23,8 +23,10 @@ A python web service to extract review details from LendingTree. Given a URL, th
 ```
 
 ## Usage
-First, set up the virtual environment for the directory:
+First, clone this repository and set up the virtual environment for the directory:
 ```sh
+> git clone https://github.com/joeylemon/reviewtracker.git
+> cd reviewtracker
 > python3 -m venv venv
 > source venv/bin/activate
 ```
